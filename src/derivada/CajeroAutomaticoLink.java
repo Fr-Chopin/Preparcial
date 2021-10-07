@@ -40,7 +40,7 @@ public class CajeroAutomaticoLink extends CajeroAutomatico {
 	}
 
 	@Override
-	public String transferirDinero() {
+	public String transferirDinero(Cliente cliente, double saldo) {
 		// TODO Auto-generated method stub
 		return null;
 	}

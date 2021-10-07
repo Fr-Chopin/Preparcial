@@ -40,7 +40,13 @@ public class CajeroAutomaticoBanelco extends CajeroAutomatico {
 	}
 
 	@Override
-	public String transferirDinero() {
+	public String transferirDinero(Cliente cliente, double saldo) {
+		String mensaje;
+		
+		if (cliente.getRed() == cliente.getRed()) {
+			
+		}
+		
 		
 		return null;
 	}
