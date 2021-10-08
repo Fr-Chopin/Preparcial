@@ -40,9 +40,29 @@ public class CajeroAutomaticoLink extends CajeroAutomatico {
 	}
 
 	@Override
-	public String transferirDinero(Cliente cliente, double saldo) {
-		// TODO Auto-generated method stub
-		return null;
+	public String transferirDinero(Cliente cliente, double saldo, Cliente clienteDestino) {
+		String mensaje;
+		double nuevoSaldoCliente;
+		double nuevoSaldoClienteDestino;
+		
+		if (cliente.getRed() != clienteDestino.getRed()) {
+			mensaje = "La red del cliente origen y/o cliente destino no son LINK";
+		}else {
+			if (cliente.getSaldo() < saldo) {
+				mensaje = "El cliente de origen no tiene saldo suficiente para realizar la transferencia";
+			}else {
+				nuevoSaldoCliente = cliente.getSaldo() - saldo;
+				cliente.setSaldo(nuevoSaldoCliente);
+				
+				nuevoSaldoClienteDestino = clienteDestino.getSaldo() + saldo;
+				clienteDestino.setSaldo(nuevoSaldoClienteDestino);
+				
+				mensaje = "La transferencia se ha realizado con éxito";
+			}
+		}
+		
+		
+		return mensaje;
 	}
 
 }

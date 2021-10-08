@@ -23,6 +23,11 @@ public class Principal {
 		System.out.println(cajeroBanelco.extraerDinero(santino, 100));
 		System.out.println(santino.getSaldo());
 		
+		System.out.println(cajeroBanelco.transferirDinero(guadalupe, 200, leandro));
+		System.out.println(leandro.getSaldo());
+		
+		System.out.println(cajeroBanelco.transferirDinero(santino, 500, leandro));
+		
 
 	}
 
